@@ -18,7 +18,7 @@ Required :
 - pip 3
 - mechanize python library
 ```
-git clone https://github.com/Superjulien/bruteweb.git
+git clone https://github.com/Superjulien/Bruteweb.git
 pip3 install mechanize 
 ```
     
