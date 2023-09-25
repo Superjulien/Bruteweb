@@ -16,19 +16,19 @@ BruteWeb is a Python script designed for security testing of web applications, s
 
 - **Username and Password Form Fields**: BruteWeb allows users to specify the names of the form fields for the username and password in the web application's login form. This flexibility accommodates different designs of web applications that may use different form field names for login credentials.
 
-- Verbosity Levels: Users can control the level of verbosity during the brute-force attack. The verbosity levels are as follows:
+- **Verbosity Levels**: Users can control the level of verbosity during the brute-force attack. The verbosity levels are as follows:
   - `none`: Minimal output (only success or failure).
   - `-v`: Standard output (also displays attempted combinations and task IDs).
   - `-vv`: User:Pass output (displays attempted username:password combinations).
   - `-vvv`: User:Pass + Response output (displays both combinations and web application responses).
 
-- Parallel Execution with Multi-Threading: To expedite the brute-force attack, BruteWeb supports multi-threading for parallel execution of multiple tasks. Users can specify the number of parallel tasks to run concurrently, enhancing the speed of the brute-force process.
+- **Parallel Execution with Multi-Threading**: To expedite the brute-force attack, BruteWeb supports multi-threading for parallel execution of multiple tasks. Users can specify the number of parallel tasks to run concurrently, enhancing the speed of the brute-force process.
 
-- Sleep Timer: Users can add a time delay (in seconds) between login attempts using the `-t` option. This feature is useful for avoiding detection and rate limiting by the target web application during the brute-force attack.
+- **Sleep Timer**: Users can add a time delay (in seconds) between login attempts using the `-t` option. This feature is useful for avoiding detection and rate limiting by the target web application during the brute-force attack.
 
-- Detailed Output: BruteWeb provides detailed output during the brute-force attack, including the attempted combinations and responses from the target web application. This information aids in analyzing the results of the attack and identifying successful login credentials.
+- **Detailed Output**: BruteWeb provides detailed output during the brute-force attack, including the attempted combinations and responses from the target web application. This information aids in analyzing the results of the attack and identifying successful login credentials.
 
-- All Combinations:  Users have the option to try all possible combinations of usernames and passwords, regardless of whether a valid combination is found, providing a thorough testing approach.
+- **All Combinations**:  Users have the option to try all possible combinations of usernames and passwords, regardless of whether a valid combination is found, providing a thorough testing approach.
 
 ## Getting Started
 
