@@ -13,6 +13,12 @@ import webbrowser
 from urllib.parse import urlparse
 from tkinter import messagebox
 
+# Bruteweb
+# by superjulien 
+# > https://github.com/Superjulien
+# > https://framagit.org/Superjulien
+# V0.99
+
 version = "0.99"
 window = None
 
