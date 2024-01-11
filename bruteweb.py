@@ -14,12 +14,12 @@ from urllib.parse import urlparse
 from tkinter import messagebox
 
 # Bruteweb
-# by superjulien 
+# by superjulien
 # > https://github.com/Superjulien
 # > https://framagit.org/Superjulien
-# V0.99
+# V0.995
 
-version = "0.99"
+version = "0.995"
 window = None
 
 class TextRedirector:
@@ -87,8 +87,19 @@ def browse(file_entry):
     file_entry.delete(0, tk.END)
     file_entry.insert(tk.END, filename)
 
+def read_usernames(filename):
+    with open(filename, "r") as user_file:
+        for line in user_file:
+            yield line.strip()
+
+def read_passwords(filename):
+    with open(filename, "r") as pass_file:
+        for line in pass_file:
+            yield line.strip()
+
 def brute_force(host, username_file, password_file, error_message, args, verb, username_field, password_field):
     global stop_event
+    combinations_tested = 0
     num_users = count_lines(username_file)
     num_passwords = count_lines(password_file)
     total_combinations = num_users * num_passwords
@@ -96,23 +107,19 @@ def brute_force(host, username_file, password_file, error_message, args, verb, u
         print(f" # Total combinations to test: {total_combinations}")
         print(f"")
         time.sleep(1)
-    with open(username_file, "r") as user_file:
-        usernames = user_file.readlines()
-    with open(password_file, "r") as pass_file:
-        passwords = pass_file.readlines()
-    combinations = list(itertools.product(usernames, passwords))
+    usernames = read_usernames(username_file)
+    passwords = read_passwords(password_file)
+    combinations = itertools.product(usernames, passwords)
     found_credentials = []
     stop_event = threading.Event()
     success_flag = [False]
     if not args.gui:
         error_message = args.error
     def process_thread(task_id):
-        global combinations_tested
-        combinations_tested = 0
-        for combination in combinations[task_id::args.tasks]:
+        nonlocal combinations_tested
+        for username, password in combinations:
             if stop_event.is_set():
                 break
-            username, password = combination
             result = brute_force_submit(host, username.strip(), password.strip(), args, verb, username_field, password_field, task_id, stop_event)
             if result is None:
                 continue
