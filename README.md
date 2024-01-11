@@ -329,7 +329,7 @@ python3 bruteweb.py -g
     Enhancing thread synchronization to avoid any issues with concurrent access to shared resources.
 
 6. Performance Enhancement : 
-    Program optimized for better resource management and performance.
+    Program optimization for better resource management and performance.
 
 7. Expanded Command-Line Interface : 
     Addition of new options and features to the command-line interface.
