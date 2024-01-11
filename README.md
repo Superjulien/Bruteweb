@@ -1,6 +1,6 @@
 # BruteWeb - Web Application Brute-Force Tool
 
-[![Version](https://img.shields.io/badge/Version-0.99-blue.svg)](https://github.com/Superjulien/Bruteweb) [![License](https://img.shields.io/badge/License-GNU_GPLv3-blue.svg)](https://choosealicense.com/licenses/gpl-3.0/) [![Python](https://img.shields.io/badge/Python_3-14354C?&logo=python&logoColor=white.svg)](https://www.python.org/)
+[![Version](https://img.shields.io/badge/Version-0.995-blue.svg)](https://github.com/Superjulien/Bruteweb) [![License](https://img.shields.io/badge/License-GNU_GPLv3-blue.svg)](https://choosealicense.com/licenses/gpl-3.0/) [![Python](https://img.shields.io/badge/Python_3-14354C?&logo=python&logoColor=white.svg)](https://www.python.org/)
 
 BruteWeb is a Python script designed for security testing of web applications, specifically for conducting Brute-Force attacks on web applications. This tool attempts to gain unauthorized access to web applications by trying different combinations of usernames and passwords.
 
